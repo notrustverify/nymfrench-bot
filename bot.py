@@ -81,7 +81,8 @@ class TelegramBot:
     def start(self, update: Update, context: CallbackContext):
         username = update.message.from_user.username
         update.message.reply_text(f"Hello, {username}!\n"
-                                  f"No Trust Verify mixnodes are\n{TelegramBot.formatMixnodes(self.mixnodes)}")
+                                  f"No Trust Verify mixnodes are\n{TelegramBot.formatMixnodes(self.mixnodes)}\n"
+                                  f"Visit [nym.notrustverify.ch](https://nym.notrustverify.ch) or join us on [Telegram](https://t.me/notrustverify)",parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
     def help(self, update: Update, context: CallbackContext):
         update.message.reply_text("Available Commands :"

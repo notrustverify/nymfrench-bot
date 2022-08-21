@@ -4,4 +4,4 @@
 
 ## Getting started
 
-TODO
+`docker-compose up -d --build`
