@@ -2,7 +2,6 @@ import json
 import logging
 import time
 
-import bleach
 import telegram
 from telegram import ParseMode
 from telegram.ext import Updater
