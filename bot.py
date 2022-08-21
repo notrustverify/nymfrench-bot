@@ -26,7 +26,7 @@ class TelegramBot:
 
     def __init__(self, telegramToken, filePath):
 
-        with open(filePath,"r") as fp:
+        with open(filePath, "r") as fp:
             self.mixnodes = json.load(fp)
 
         print(self.mixnodes)
@@ -70,7 +70,6 @@ class TelegramBot:
             else:
                 break
 
-
     @staticmethod
     def formatMixnodes(mixnodes):
         msg = ""
@@ -91,35 +90,8 @@ class TelegramBot:
     def getMixnodes(self, update: Update, context: CallbackContext):
 
         print(f"mixnode, Data {context.args}")
-        msg = f"Availables mixnodes\n\n"+TelegramBot.formatMixnodes(self.mixnodes)
+        msg = f"Availables mixnodes\n\n" + TelegramBot.formatMixnodes(self.mixnodes)
         update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
-
-    def remove(self, update: Update, context: CallbackContext):
-        if update.edited_message:
-            self.logHandler.error(f"remove() Edited message from {update.edited_message.from_user.id}")
-            return
-
-        if len(context.args) == 1:
-            idKey = bleach.clean(context.args[0])
-            status = self.nymRest.getStatus(idKey)
-
-            if status == 'invalid':
-                self.logHandler.error(f"mixnode, Data {context.args}")
-                update.message.reply_text(f"Mixnode {idKey} not found")
-            elif status is None:
-                self.logHandler.error(f"mixnode, Data {context.args}")
-                update.message.reply_text(f"Error with mixnode {idKey}")
-            else:
-                if self.delData(update.message.from_user.id, idKey, False):
-                    update.message.reply_text(
-                        f"mixnode {idKey} removed")
-                else:
-                    update.message.reply_text(
-                        f"No mixnode with {idKey} for you")
-
-        else:
-            update.message.reply_text(
-                f"Error: Usage /mixnode mixnode identity key")
 
     def unknown_text(self, update: Update, context: CallbackContext):
         print(f"unknown_text: {update.message.text}")
