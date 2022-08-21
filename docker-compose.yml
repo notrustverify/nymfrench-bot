@@ -2,7 +2,7 @@ version: "3.3"
 
 
 services:
-  nymon:
+  ntv-bot:
     build: .
     restart: unless-stopped
     env_file: .env
