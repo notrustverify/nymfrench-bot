@@ -79,7 +79,7 @@ class TelegramBot:
 
     def start(self, update: Update, context: CallbackContext):
         username = update.message.from_user.username
-        update.message.reply_text(f"Hello!\nNo Trust Verify mixnodes are\n\n{TelegramBot.formatMixnodes(self.mixnodes)}\nVisit [nym.notrustverify.ch](https://nym.notrustverify.ch) or join us on [Telegram](https://t.me/notrustverify)",
+        update.message.reply_text(f"Hello!\n[No Trust Verify](https://nym.notrustverify.ch) mixnodes are\n\n{TelegramBot.formatMixnodes(self.mixnodes)}\nVisit [nym.notrustverify.ch](https://nym.notrustverify.ch) or join us on [Telegram](https://t.me/notrustverify)",
                                   parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
     def help(self, update: Update, context: CallbackContext):
@@ -89,7 +89,7 @@ class TelegramBot:
     def getMixnodes(self, update: Update, context: CallbackContext):
 
         print(f"mixnode, Data {context.args}")
-        msg = f"Availables mixnodes\n\n" + TelegramBot.formatMixnodes(self.mixnodes)
+        msg = f"Available mixnodes\n\n" + TelegramBot.formatMixnodes(self.mixnodes)
         update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
     def unknown_text(self, update: Update, context: CallbackContext):
