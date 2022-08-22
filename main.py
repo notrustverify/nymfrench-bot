@@ -4,10 +4,7 @@ from dotenv import load_dotenv
 import os
 from bot import TelegramBot
 
-BASE_URL_MIXNODE = "https://sandbox-validator.nymtech.net/api/v1/status/mixnode"
-BASE_URL_GW = "https://sandbox-validator.nymtech.net/api/v1/status/gateway"
-BASE_URL_EXPLORER = "https://sandbox-explorer.nymtech.net"
-MIXNODES_FILE = "data/mixnodes.json"
+MIXNODES_FILE = "data/nodes.json"
 
 
 def main(telegramToken):
