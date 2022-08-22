@@ -2,6 +2,7 @@ import json
 import logging
 import time
 
+import requests
 import telegram
 from telegram import ParseMode
 from telegram.ext import Updater
@@ -74,50 +75,52 @@ class TelegramBot:
     @staticmethod
     def formatMixnodes(mixnodes):
         msg = ""
+
         for mixnode in mixnodes['mixnodes']:
+            stake = 0.0
             try:
-               req = requests.get(BASE_URL_MIXNODE+mixnode['idkey']+BASE_URL_STAKE)
-               if req.ok:
-                    stake = req.get('saturation')
-            catch requests.exceptions.RequestException as e:
+                req = requests.get(BASE_URL_MIXNODE + mixnode['idkey'] + BASE_URL_STAKE)
+                if req.ok:
+                    stake = req.json().get('saturation')
+            except requests.exceptions.RequestException as e:
                 print(e)
-                stake = 0.0
-            
-             try:
-               req = requests.get(NG_APY)
-               if req.ok:
-                    apy = list(filter(lambda x:x["identityKey"]==mixnode,req.json())[0].get('apy')
-             catch requests.exceptions.RequestException as e:
+
+            apy = 0.0
+            try:
+                req = requests.get(NG_APY,timeout=20)
+                if req.ok:
+                    apy = list(filter(lambda x: x["identityKey"] == mixnode['idkey'], req.json()))[0]['apy']
+            except requests.exceptions.RequestException as e:
                 print(e)
-                apy = 0.0
-            
-            msg += f"{mixnode['name']}\n`{mixnode['idkey']}`\n\n"
-            
+
+            msg += f"\n{mixnode['name']}"
+            msg += f"\nIdentity Key: `{mixnode['idkey']}`"
+
             if stake > 0.0:
-                msg += f"\n\tStake saturation: {stake*100:.2f}%"
-                msg += f"\n\tDelegations accepted: {STATE_INACTIVE if stake > 0.99 else STATE_ACTIVE}"
-                    
+                msg += f"\nStake saturation: {stake * 100:.2f}%"
+                msg += f"\n**Delegations accepted: {STATE_INACTIVE if stake > 0.99 else STATE_ACTIVE}**"
+
             if apy > 0.0:
-               msg += f"\n\tAPY: {apy*100:.2f}%"
-                   
-                               
-             msg += f"\n\t[Explorer](https://explorer.nymtech.net/network-components/mixnode/{mixnode['idkey']})"
-            
+                msg += f"\nAPY: {apy * 100:.2f}%"
+
+            msg += f"\n[Explorer](https://explorer.nymtech.net/network-components/mixnode/{mixnode['idkey']})\n"
+
         return msg
 
     def start(self, update: Update, context: CallbackContext):
         username = update.message.from_user.username
-        update.message.reply_text(f"Hello!\n[No Trust Verify](https://nym.notrustverify.ch) mixnodes are\n\n{TelegramBot.formatMixnodes(self.mixnodes)}\nVisit [nym.notrustverify.ch](https://nym.notrustverify.ch) or join us on [Telegram](https://t.me/notrustverify)",
-                                  parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+        update.message.reply_text(
+            f"Hello!\n[No Trust Verify](https://nym.notrustverify.ch) mixnodes are\n\n{TelegramBot.formatMixnodes(self.mixnodes)}\nVisit [nym.notrustverify.ch](https://nym.notrustverify.ch) or join us on [Telegram](https://t.me/notrustverify)",
+            parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
     def help(self, update: Update, context: CallbackContext):
         update.message.reply_text("Available Commands :"
-                                  "\n\t/mixnodes.json - Retrieve No Trust Verify mixnodes.json identity key")
+                                  "\n\t/mixnodes - Retrieve No Trust Verify mixnodes")
 
     def getMixnodes(self, update: Update, context: CallbackContext):
 
         print(f"mixnode, Data {context.args}")
-        msg = f"Available mixnodes\n\n" + TelegramBot.formatMixnodes(self.mixnodes)
+        msg = TelegramBot.formatMixnodes(self.mixnodes)
         update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
     def unknown_text(self, update: Update, context: CallbackContext):
