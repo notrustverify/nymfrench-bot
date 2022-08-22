@@ -11,7 +11,8 @@ from telegram.ext.filters import Filters
 from telegram.ext.messagehandler import MessageHandler
 from telegram.update import Update
 
-BASE_URL_MIXNODE = "https://sandbox-validator.nymtech.net/api/v1/status/mixnode"
+BASE_URL_MIXNODE = "https://validator.nymtech.net/api/v1/status/mixnode/"
+BASE_URL_STAKE = "/stake-saturation"
 BASE_URL_EXPLORER = "https://sandbox-explorer.nymtech.net"
 
 STATE_INACTIVE = "🟥"
@@ -73,7 +74,20 @@ class TelegramBot:
     def formatMixnodes(mixnodes):
         msg = ""
         for mixnode in mixnodes['mixnodes']:
+            try:
+               req = requests.get(BASE_URL_MIXNODE+{mixnode['idkey']+BASE_URL_STAKE)
+               if req.ok:
+                    stake = req.get('saturation')
+            catch requests.exceptions.RequestException as e:
+                print(e)
+                stake = 0.0
+            
             msg += f"{mixnode['name']}\n`{mixnode['idkey']}`\n\n"
+            
+            if stake > 0.0:
+                msg += f"\n\tStake saturation: {stake*100}%"
+                msg += f"\n\tDelegations accepted: {STATE_INACTIVE if stake > 0.99999 else STATE_ACTIVE}"
+            
 
         return msg
 
