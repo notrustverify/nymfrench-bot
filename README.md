@@ -8,6 +8,9 @@
 
 Follow this [doc](https://core.telegram.org/bots#6-botfather) about how to create a bot
 
+## Example
+
+![](./resources/img/example.png)
 
 ## Getting started
 
