@@ -14,6 +14,7 @@ from telegram.update import Update
 BASE_URL_MIXNODE = "https://validator.nymtech.net/api/v1/status/mixnode/"
 BASE_URL_STAKE = "/stake-saturation"
 BASE_URL_EXPLORER = "https://sandbox-explorer.nymtech.net"
+NG_APY = "https://mixnet.api.explorers.guru/api/mixnodes"
 
 STATE_INACTIVE = "🟥"
 STATE_STANDBY = "🟦"
@@ -75,20 +76,33 @@ class TelegramBot:
         msg = ""
         for mixnode in mixnodes['mixnodes']:
             try:
-               req = requests.get(BASE_URL_MIXNODE+{mixnode['idkey']+BASE_URL_STAKE)
+               req = requests.get(BASE_URL_MIXNODE+mixnode['idkey']+BASE_URL_STAKE)
                if req.ok:
                     stake = req.get('saturation')
             catch requests.exceptions.RequestException as e:
                 print(e)
                 stake = 0.0
             
+             try:
+               req = requests.get(NG_APY)
+               if req.ok:
+                    apy = list(filter(lambda x:x["identityKey"]==mixnode,req.json())[0].get('apy')
+             catch requests.exceptions.RequestException as e:
+                print(e)
+                apy = 0.0
+            
             msg += f"{mixnode['name']}\n`{mixnode['idkey']}`\n\n"
             
             if stake > 0.0:
-                msg += f"\n\tStake saturation: {stake*100}%"
-                msg += f"\n\tDelegations accepted: {STATE_INACTIVE if stake > 0.99999 else STATE_ACTIVE}"
+                msg += f"\n\tStake saturation: {stake*100:.2f}%"
+                msg += f"\n\tDelegations accepted: {STATE_INACTIVE if stake > 0.99 else STATE_ACTIVE}"
+                    
+            if apy > 0.0:
+               msg += f"\n\tAPY: {apy*100:.2f}%"
+                   
+                               
+             msg += f"\n\t[Explorer](https://explorer.nymtech.net/network-components/mixnode/{mixnode['idkey']})"
             
-
         return msg
 
     def start(self, update: Update, context: CallbackContext):
