@@ -11,10 +11,11 @@ from telegram.ext.commandhandler import CommandHandler
 from telegram.ext.filters import Filters
 from telegram.ext.messagehandler import MessageHandler
 from telegram.update import Update
+from utils import Utils
 
 BASE_URL_MIXNODE = "https://validator.nymtech.net/api/v1/status/mixnode/"
+BASE_URL_EXPLORER = "https://explorer.nymtech.net/api/v1/mix-node/"
 BASE_URL_STAKE = "/stake-saturation"
-BASE_URL_EXPLORER = "https://sandbox-explorer.nymtech.net"
 NG_APY = "https://mixnet.api.explorers.guru/api/mixnodes"
 
 STATE_INACTIVE = "🟥"
@@ -23,6 +24,7 @@ STATE_ACTIVE = "🟩"
 STATE_ERROR = "🟨"
 
 TIME_FORMAT = "%d.%m.%y %H:%M:%S"
+UNYM = 10 ** 6
 
 
 class TelegramBot:
@@ -73,31 +75,56 @@ class TelegramBot:
                 break
 
     @staticmethod
+    def getData(url, session):
+
+        try:
+            req = session.get(url)
+            if req.ok:
+                return req
+        except requests.exceptions.RequestException as e:
+            print(e)
+            return 0.0
+
+    @staticmethod
     def formatMixnodes(mixnodes):
         msg = ""
 
-        for mixnode in mixnodes['mixnodes']:
-            stake = 0.0
-            try:
-                req = requests.get(BASE_URL_MIXNODE + mixnode['idkey'] + BASE_URL_STAKE)
-                if req.ok:
-                    stake = req.json().get('saturation')
-            except requests.exceptions.RequestException as e:
-                print(e)
+        s = requests.session()
 
-            apy = 0.0
+        for mixnode in mixnodes['mixnodes']:
             try:
-                req = requests.get(NG_APY,timeout=20)
-                if req.ok:
-                    apy = list(filter(lambda x: x["identityKey"] == mixnode['idkey'], req.json()))[0]['apy']
-            except requests.exceptions.RequestException as e:
+                amountStake = float(
+                    TelegramBot.getData(BASE_URL_EXPLORER + mixnode['idkey'], s).json()['total_delegation']['amount'])
+            except KeyError as e:
                 print(e)
+                amountStake = 0.0
+
+            try:
+                amountStake /= UNYM
+            except ZeroDivisionError as e:
+                print(e)
+                amountStake = 0.0
+
+            try:
+                stake = TelegramBot.getData(BASE_URL_MIXNODE + mixnode['idkey'] + BASE_URL_STAKE, s).json()[
+                    'saturation']
+            except KeyError as e:
+                print(e)
+                stake = 0.0
+
+            try:
+                apy = \
+                list(filter(lambda x: x["identityKey"] == mixnode['idkey'], TelegramBot.getData(NG_APY, s).json()))[0][
+                    'apy']
+            except KeyError as e:
+                print(e)
+                apy = 0.0
 
             msg += f"\n{mixnode['name']}"
             msg += f"\nIdentity Key: `{mixnode['idkey']}`"
 
             if stake > 0.0:
-                msg += f"\nStake saturation: {stake * 100:.2f}%"
+                msg += f"\nStake saturation: {stake * 100:.2f}% ({Utils.humanFormat(amountStake, 2)} NYM)"
                 msg += f"\n**Delegations accepted: {STATE_INACTIVE if stake > 0.99 else STATE_ACTIVE}**"
 
             if apy > 0.0:
