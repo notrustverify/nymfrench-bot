@@ -2,8 +2,10 @@ version: "3.3"
 
 
 services:
-  ntv-bot:
+  nymfrench-bot:
     build: .
     restart: unless-stopped
     env_file: .env
+    volumes:
+      - ./data/node.json:/app/data/nodes.json
 

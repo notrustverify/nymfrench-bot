@@ -4,11 +4,11 @@ from dotenv import load_dotenv
 import os
 from bot import TelegramBot
 
-MIXNODES_FILE = "data/nodes.json"
+NODES_FILE = "data/nodes.json"
 
 
 def main(telegramToken,queryApi):
-    bot = TelegramBot(telegramToken, MIXNODES_FILE,queryApi)
+    bot = TelegramBot(telegramToken, NODES_FILE, queryApi)
 
     bot.startBot()
 
