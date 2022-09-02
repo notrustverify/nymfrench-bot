@@ -1,4 +1,23 @@
-# NTV Bot
+# [Nym (French)](https://t.me/nymfrench) community Bot
+
+## Ajouter un mixnode
+
+1. Fork du repo
+2. Modifier le fichier [nodes.json](data/nodes.json) et rajouter les informations sour `mixnodes:
+
+  * identity key du mixnode
+  * pseudo Telegram 
+  * site Web (optionnel)
+  * [Emoji du pays](https://emojipedia.org/flags/) + région
+
+Par exemple:
+```json
+{
+    "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
+    "user": ["Oheka","cgi_bin"],
+    "name": "nym.notrustverify.ch - 🇨🇭Zurich"
+  },
+```
 
 ## Pre-requisites
 
