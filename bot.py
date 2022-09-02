@@ -29,7 +29,7 @@ UNYM = 10 ** 6
 
 class TelegramBot:
 
-    def __init__(self, telegramToken, filePath,queryApi):
+    def __init__(self, telegramToken, filePath, queryApi):
 
         with open(filePath, "r") as fp:
             self.mixnodes = json.load(fp)
@@ -42,11 +42,11 @@ class TelegramBot:
         self.updater.dispatcher.add_handler(CommandHandler('help', self.help))
         self.updater.dispatcher.add_handler(CommandHandler('mixnodes', self.getMixnodes))
         self.updater.dispatcher.add_handler(CommandHandler('m', self.getMixnodes))
-        self.updater.dispatcher.add_handler(MessageHandler(Filters.text, self.unknown))
-        self.updater.dispatcher.add_handler(MessageHandler(Filters.command, self.unknown))
+        # self.updater.dispatcher.add_handler(MessageHandler(Filters.text, self.unknown))
+        # self.updater.dispatcher.add_handler(MessageHandler(Filters.command, self.unknown))
 
         # Filters out unknown messages.
-        self.updater.dispatcher.add_handler(MessageHandler(Filters.text, self.unknown_text))
+        # self.updater.dispatcher.add_handler(MessageHandler(Filters.text, self.unknown_text))
 
         print(f"Start {__name__}")
 
@@ -86,10 +86,8 @@ class TelegramBot:
             print(e)
             return 0.0
 
-
-
     @staticmethod
-    def formatMixnodes(mixnodes,queryApi):
+    def formatMixnodes(mixnodes, queryApi):
         msg = ""
 
         s = requests.session()
@@ -99,36 +97,41 @@ class TelegramBot:
             stake = 0.0
             apy = 0.0
 
-            if queryApi :
+            if queryApi:
                 try:
                     amountStake = float(
-                        TelegramBot.getData(BASE_URL_EXPLORER + mixnode['idkey'], s).json()['total_delegation']['amount'])
+                        TelegramBot.getData(BASE_URL_EXPLORER + mixnode['idkey'], s).json()['total_delegation'][
+                            'amount'])
                 except KeyError as e:
                     print(e)
-                    
 
                 try:
                     amountStake /= UNYM
                 except ZeroDivisionError as e:
                     print(e)
-                   
 
                 try:
                     stake = TelegramBot.getData(BASE_URL_MIXNODE + mixnode['idkey'] + BASE_URL_STAKE, s).json()[
                         'saturation']
                 except KeyError as e:
                     print(e)
-                   
 
                 try:
                     apy = \
-                    list(filter(lambda x: x["identityKey"] == mixnode['idkey'], TelegramBot.getData(NG_APY, s).json()))[0][
-                        'apy']
+                        list(filter(lambda x: x["identityKey"] == mixnode['idkey'],
+                                    TelegramBot.getData(NG_APY, s).json()))[0][
+                            'apy']
                 except KeyError as e:
                     print(e)
-                    
 
-            msg += f"\n{mixnode['name']}"
+            try:
+                msg += "\n"
+                for user in mixnode.get('user'):
+                    msg += f"[{user}](https://t.me/{user}) - "
+            except TypeError as e:
+                print(e)
+
+            msg += f"{mixnode['name']}"
             msg += f"\nIdentity Key: `{mixnode['idkey']}`"
 
             if stake > 0.0:
@@ -153,7 +156,7 @@ class TelegramBot:
     def start(self, update: Update, context: CallbackContext):
         username = update.message.from_user.username
         update.message.reply_text(
-            f"Hello!\nLes mixnodes de la [communauté francophone](https://t.me/nymfrench) sont \n\n{TelegramBot.formatMixnodes(self.mixnodes,self.queryApi)}\nRejoignez-nous sur [Telegram](https://t.me/nymfrench)",
+            f"Hello!\nLes mixnodes de la [communauté francophone](https://t.me/nymfrench) sont \n\n{TelegramBot.formatMixnodes(self.mixnodes, self.queryApi)}\nRejoignez-nous sur [Telegram](https://t.me/nymfrench)",
             parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
     def help(self, update: Update, context: CallbackContext):
@@ -161,9 +164,9 @@ class TelegramBot:
                                   "\n\t/mixnodes - Retrieve mixnodes")
 
     def getMixnodes(self, update: Update, context: CallbackContext):
-        
+
         print(f"mixnode, Data {context.args}")
-        msg = TelegramBot.formatMixnodes(self.mixnodes,self.queryApi)
+        msg = TelegramBot.formatMixnodes(self.mixnodes, self.queryApi)
 
         if self.mixnodes.get('links') is not None:
             msg += TelegramBot.formatLinks(self.mixnodes)

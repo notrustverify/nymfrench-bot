@@ -8,47 +8,58 @@
 "mixnodes": [
   {
     "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
-    "name": "@Oheka et @svenHash - nym.notrustverify.ch - 🇨🇭Zurich"
+    "user": ["Oheka","cgi_bin"],
+    "name": "nym.notrustverify.ch - 🇨🇭Zurich"
   },
   {
     "idkey": "4yRfauFzZnejJhG2FACTVQ7UnYEcFUYw3HzXrmuwLMaR",
-    "name": "@Oheka et @svenHash - nym.notrustverify.ch - 🇨🇭Genève1"
+    "user": ["Oheka","cgi_bin"],
+    "name": "nym.notrustverify.ch - 🇨🇭Genève1"
   },
   {
     "idkey": "B63yxdf92RdjwEeUFouxU4x5gRpWXKorT51px8EbpQvJ",
-    "name": "@Oheka et @svenHash - nym.notrustverify.ch - 🇨🇭Genève"
+    "user": ["Oheka","cgi_bin"],
+    "name": "nym.notrustverify.ch - 🇨🇭Genève"
   },
   {
     "idkey": "93SM33b2hxtaf4FU1myHjQkfswQ2rsyFjRV5gLFjD41X",
-    "name": "@alexbfr - 🇺🇸 New-York"
+    "user": ["alexbfr"],
+    "name": "🇺🇸 New-York"
   },
   {
     "idkey": "D58EM1Sb69tDpJBtUB4LevwyN28AMTFaqjsM8p8NhNpE",
-    "name": "@n0bra1in - 🇫🇷 Paris "
+    "user":["n0bra1in"],
+    "name": "🇫🇷 Paris"
   },
   {
     "idkey": "29Q3jp7DN1ER82DcBFXo6v6hvWpKtvnP7SEmcmPJ8E9E",
-    "name": "@RemiStrasser - 🇬🇧 Londres"
+    "user": ["RemiStrasser"],
+    "name": "🇬🇧 Londres"
   },
   {
     "idkey": "CRJwf7MhagEmKjP42Co5PAM2UxeX7F5CHYCZ6FshrhUv",
-    "name": "@RemiStrasser - 🇬🇧 Londres"
+    "user": ["RemiStrasser"],
+    "name": "🇬🇧 Londres"
   },
   {
     "idkey": "7w5dJR14ZqfBnnqVyyPY3XPwfpVZrFvLkXYHNHR7GXDg",
-    "name": "@lebeckk - mynixnode.com - 🇨🇭Zurich "
+    "user": ["lebeckk"],
+    "name": "mynixnode.com - 🇨🇭Zurich "
   },
   {
     "idkey": "4nb36LzsEhxeZp4TCV3VDzxVwqL1JQNpKixqVELtqZ8e",
-    "name": "@tholgd  - 🇫🇷 Paris"
+    "user": ["tholgd"],
+    "name": "🇫🇷 Paris"
   },
   {
     "idkey": "D5jBtaNaZx2jn7111tBSA362KzvBHU9jXKMYYngHmEVb",
-    "name": "@ketominer  - 🇫🇷 Paris"
+    "user": ["ketominer"],
+    "name": "🇫🇷 Paris"
   },
   {
     "idkey": "HPmsQj4fNoDocYAVhyZqqQSWVrawBZj3CJw2gJNEC55D",
-    "name": "@drkilljs - 🇩🇪 Düsseldorf"
+    "user": ["drkilljs"],
+    "name": "🇩🇪 Düsseldorf"
   }
   ]
 }
