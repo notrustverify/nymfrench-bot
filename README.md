@@ -15,7 +15,7 @@ Follow this [doc](https://core.telegram.org/bots#6-botfather) about how to creat
 ## Getting started
 
 ```bash
-git clone https://github.com/notrustverify/ntv-bot.git
+git clone https://github.com/notrustverify/nymfrench-bot.git
 cd ntv-bot
 cp .env.example .env
 
