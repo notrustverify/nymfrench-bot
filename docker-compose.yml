@@ -7,5 +7,5 @@ services:
     restart: unless-stopped
     env_file: .env
     volumes:
-      - ./data/node.json:/app/data/nodes.json
+      - ./data/:/app/data/
 
