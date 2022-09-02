@@ -166,7 +166,6 @@ class TelegramBot:
         msg = TelegramBot.formatMixnodes(self.mixnodes,self.queryApi)
 
         if self.mixnodes.get('links') is not None:
-            print(self.mixnodes.get('links'))
             msg += TelegramBot.formatLinks(self.mixnodes)
 
         update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
