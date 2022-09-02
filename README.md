@@ -22,7 +22,7 @@ cp .env.example .env
 ```
 In `.env` file, modify the value `TELEGRAM_TOKEN` by the token generated from [Botfather](https://t.me/botfather)
 
-Start the bot `docker-compose up -d --build`
+Start the bot `docker compose up -d --build`
 
 
 ### Add your nodes
