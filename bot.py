@@ -88,7 +88,7 @@ class TelegramBot:
 
     @staticmethod
     def formatMixnodes(mixnodes, queryApi):
-        msg = ""
+        msg = "\n🪢 Mixnodes 🪢"
 
         s = requests.session()
 
@@ -146,6 +146,26 @@ class TelegramBot:
         return msg
 
     @staticmethod
+    def formatGateways(mixnodes):
+        msg = "\n\n🚪 Passerelles francophones 🚪"
+
+        for gateway in mixnodes['gateways']:
+
+            try:
+                msg += "\n"
+                for user in gateway.get('user'):
+                    msg += f"[{user}](https://t.me/{user}) - "
+            except TypeError as e:
+                print(e)
+
+            msg += f"{gateway['name']}"
+            msg += f"\nIdentity Key: `{gateway['idkey']}`"
+
+            msg += f"\n[Explorer](https://explorer.nymtech.net/network-components/gateways)\n"
+
+        return msg
+
+    @staticmethod
     def formatLinks(links):
         msg = ""
         for link in links['links']:
@@ -167,6 +187,7 @@ class TelegramBot:
 
         print(f"mixnode, Data {context.args}")
         msg = TelegramBot.formatMixnodes(self.mixnodes, self.queryApi)
+        msg += TelegramBot.formatGateways(self.mixnodes)
 
         if self.mixnodes.get('links') is not None:
             msg += TelegramBot.formatLinks(self.mixnodes)
