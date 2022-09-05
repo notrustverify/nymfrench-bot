@@ -3,7 +3,7 @@ version: "3.3"
 
 services:
   nymfrench-bot:
-    build: .
+    image: notrustverify/ntv-bot:nymfrench-bot
     restart: unless-stopped
     env_file: .env
     volumes:
