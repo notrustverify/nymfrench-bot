@@ -82,6 +82,9 @@
       "idkey":"ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
       "user": ["NoTrustVerify"],
       "name": "nym.notrustverify.ch - 🇸🇬Singapore"
-    }
-  ]
-}
+    },
+    {
+    "idkey": "DcuQg5P4H4F9qHXrZYvUN4GgNX3oGR4n6ieD9oeNkAds",
+    "user": ["Jerem1802"],
+    "name": "french-connection - 🇫🇷Lyon"
+  },
