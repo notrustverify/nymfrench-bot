@@ -5,10 +5,9 @@
 1. Fork du repo
 2. Modifier le fichier [nodes.json](data/nodes.json) et rajouter les informations sour `mixnodes:
 
-  * identity key du mixnode
-  * pseudo Telegram 
-  * site Web (optionnel)
-  * [Emoji du pays](https://emojipedia.org/flags/) + région
+  * `idkey`: identity key du mixnode
+  * `user`: pseudo Telegram (sans le `@`) 
+  * `name`: site Web (optionnel) - [Emoji du pays](https://emojipedia.org/flags/) région
 
 Par exemple:
 ```json
@@ -19,7 +18,9 @@ Par exemple:
   },
 ```
 
-## Pre-requisites
+## To launch your own bot
+
+### Pre-requisites
 
 - docker
 - docker-compose
@@ -27,11 +28,11 @@ Par exemple:
 
 Follow this [doc](https://core.telegram.org/bots#6-botfather) about how to create a bot
 
-## Example
+### Example
 
 ![](./resources/img/example.png)
 
-## Getting started
+### Getting started
 
 ```bash
 git clone https://github.com/notrustverify/nymfrench-bot.git
@@ -42,24 +43,4 @@ cp .env.example .env
 In `.env` file, modify the value `TELEGRAM_TOKEN` by the token generated from [Botfather](https://t.me/botfather)
 
 Start the bot `docker compose up -d --build`
-
-
-### Add your nodes
-
-In `data/nodes.json`, add the identity key and name like the example below
-
-```json
-{
-"mixnodes": [
-  {
-    "idkey": "4yRfauFzZnejJhG2FACTVQ7UnYEcFUYw3HzXrmuwLMaR",
-    "name": "No Trust Verify 2"
-  },
-  {
-    "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
-    "name": "No Trust Verify 1"
-  }
-  ]
-}
-```
 
