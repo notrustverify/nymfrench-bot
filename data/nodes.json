@@ -1,92 +1,88 @@
 {
-"links":[
-  {
-    "description": "Comment déléguer",
-   "link": "https://medium.com/notrustverify/vous-voulez-d%C3%A9l%C3%A9guer-sur-nym-voici-comment-choisir-un-mixnode-pour-d%C3%A9l%C3%A9guer-ses-nym-96c3b2b31de0"
-  }
-],
-"mixnodes": [
-  {
-    "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
-    "user": ["NoTrustVerify"],
-    "name": "nym.notrustverify.ch - 🇨🇭Zurich"
-  },
-  {
-    "idkey": "4yRfauFzZnejJhG2FACTVQ7UnYEcFUYw3HzXrmuwLMaR",
-    "user": ["NoTrustVerify"],
-    "name": "nym.notrustverify.ch - 🇨🇭Genève"
-  },
-  {
-    "idkey": "B63yxdf92RdjwEeUFouxU4x5gRpWXKorT51px8EbpQvJ",
-    "user": ["NoTrustVerify"],
-    "name": "nym.notrustverify.ch - 🇨🇭Genève"
-  },
-  {
-    "idkey": "93SM33b2hxtaf4FU1myHjQkfswQ2rsyFjRV5gLFjD41X",
-    "user": ["alexbfr"],
-    "name": "🇺🇸 New-York"
-  },
-  {
-    "idkey": "D58EM1Sb69tDpJBtUB4LevwyN28AMTFaqjsM8p8NhNpE",
-    "user":["n0bra1in"],
-    "name": "🇫🇷 Paris"
-  },
-  {
-    "idkey": "29Q3jp7DN1ER82DcBFXo6v6hvWpKtvnP7SEmcmPJ8E9E",
-    "user": ["RemiStrasser"],
-    "name": "🇬🇧 Londres"
-  },
-  {
-    "idkey": "CRJwf7MhagEmKjP42Co5PAM2UxeX7F5CHYCZ6FshrhUv",
-    "user": ["RemiStrasser"],
-    "name": "🇬🇧 Londres"
-  },
-  {
-    "idkey": "7w5dJR14ZqfBnnqVyyPY3XPwfpVZrFvLkXYHNHR7GXDg",
-    "user": ["lebeckk"],
-    "name": "mynixnode.com - 🇨🇭Zurich "
-  },
-  {
-    "idkey": "4nb36LzsEhxeZp4TCV3VDzxVwqL1JQNpKixqVELtqZ8e",
-    "user": ["tholgd"],
-    "name": "🇫🇷 Paris"
-  },
-  {
-    "idkey": "D5jBtaNaZx2jn7111tBSA362KzvBHU9jXKMYYngHmEVb",
-    "user": ["ketominer"],
-    "name": "🇫🇷 Paris"
-  },
-  {
-    "idkey": "HPmsQj4fNoDocYAVhyZqqQSWVrawBZj3CJw2gJNEC55D",
-    "user": ["drkilljs"],
-    "name": "🇩🇪 Düsseldorf"
-  },
-  {
-      "idkey": "AGaxU9ADJRUZmFwpxfooTApvc4qVq8VwtpPerHKmQSqj",
-      "user": ["zBlaxx"],
-      "name": "🇫🇷 Lyon"
-  },
-  {
-    "idkey": "DcuQg5P4H4F9qHXrZYvUN4GgNX3oGR4n6ieD9oeNkAds",
-    "user": ["Jerem1802"],
-    "name": "french-connection - 🇫🇷Lyon"
-  }
-  ],
-  "gateways": [
-    {
-      "idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
-      "user": ["NoTrustVerify"],
-      "name": "nym.notrustverify.ch - 🇨🇭Zürich"
-    },
-    {
-      "idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
-      "user": ["RemiStrasser"],
-      "name": "🇬🇧Londres"
-    },
-    {
-      "idkey":"ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
-      "user": ["NoTrustVerify"],
-      "name": "nym.notrustverify.ch - 🇸🇬Singapore"
-    }
-  ]
+	"links": [{
+		"description": "Comment déléguer",
+		"link": "https://medium.com/notrustverify/vous-voulez-d%C3%A9l%C3%A9guer-sur-nym-voici-comment-choisir-un-mixnode-pour-d%C3%A9l%C3%A9guer-ses-nym-96c3b2b31de0"
+	}],
+	"gateways": [{
+			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇨🇭Zürich"
+		},
+		{
+			"idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
+			"user": ["RemiStrasser"],
+			"name": "🇬🇧Londres"
+		},
+		{
+			"idkey": "ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇸🇬Singapore"
+		}
+	],
+	"mixnodes": [{
+			"idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇨🇭Zurich"
+		},
+		{
+			"idkey": "4yRfauFzZnejJhG2FACTVQ7UnYEcFUYw3HzXrmuwLMaR",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇨🇭Genève"
+		},
+		{
+			"idkey": "B63yxdf92RdjwEeUFouxU4x5gRpWXKorT51px8EbpQvJ",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇨🇭Genève"
+		},
+		{
+			"idkey": "93SM33b2hxtaf4FU1myHjQkfswQ2rsyFjRV5gLFjD41X",
+			"user": ["alexbfr"],
+			"name": "🇺🇸 New-York"
+		},
+		{
+			"idkey": "D58EM1Sb69tDpJBtUB4LevwyN28AMTFaqjsM8p8NhNpE",
+			"user": ["n0bra1in"],
+			"name": "🇫🇷 Paris"
+		},
+		{
+			"idkey": "29Q3jp7DN1ER82DcBFXo6v6hvWpKtvnP7SEmcmPJ8E9E",
+			"user": ["RemiStrasser"],
+			"name": "🇬🇧 Londres"
+		},
+		{
+			"idkey": "CRJwf7MhagEmKjP42Co5PAM2UxeX7F5CHYCZ6FshrhUv",
+			"user": ["RemiStrasser"],
+			"name": "🇬🇧 Londres"
+		},
+		{
+			"idkey": "7w5dJR14ZqfBnnqVyyPY3XPwfpVZrFvLkXYHNHR7GXDg",
+			"user": ["lebeckk"],
+			"name": "mynixnode.com - 🇨🇭Zurich "
+		},
+		{
+			"idkey": "4nb36LzsEhxeZp4TCV3VDzxVwqL1JQNpKixqVELtqZ8e",
+			"user": ["tholgd"],
+			"name": "🇫🇷 Paris"
+		},
+		{
+			"idkey": "D5jBtaNaZx2jn7111tBSA362KzvBHU9jXKMYYngHmEVb",
+			"user": ["ketominer"],
+			"name": "🇫🇷 Paris"
+		},
+		{
+			"idkey": "HPmsQj4fNoDocYAVhyZqqQSWVrawBZj3CJw2gJNEC55D",
+			"user": ["drkilljs"],
+			"name": "🇩🇪 Düsseldorf"
+		},
+		{
+			"idkey": "AGaxU9ADJRUZmFwpxfooTApvc4qVq8VwtpPerHKmQSqj",
+			"user": ["zBlaxx"],
+			"name": "🇫🇷 Lyon"
+		},
+		{
+			"idkey": "DcuQg5P4H4F9qHXrZYvUN4GgNX3oGR4n6ieD9oeNkAds",
+			"user": ["Jerem1802"],
+			"name": "french-connection - 🇫🇷Lyon"
+		}
+	]
 }
