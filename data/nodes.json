@@ -61,12 +61,11 @@
     "user": ["drkilljs"],
     "name": "🇩🇪 Düsseldorf"
   },
-    {
-      "idkey":
-      "AGaxU9ADJRUZmFwpxfooTApvc4qVq8VwtpPerHKmQSqj",
+  {
+      "idkey": "AGaxU9ADJRUZmFwpxfooTApvc4qVq8VwtpPerHKmQSqj",
       "user": ["zBlaxx"],
       "name": "🇫🇷 Lyon"
-    }
+   }
   ],
   "gateways": [
     {
