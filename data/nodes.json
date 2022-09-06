@@ -65,12 +65,13 @@
       "idkey": "AGaxU9ADJRUZmFwpxfooTApvc4qVq8VwtpPerHKmQSqj",
       "user": ["zBlaxx"],
       "name": "🇫🇷 Lyon"
-    },
-    {
+  },
+  {
     "idkey": "DcuQg5P4H4F9qHXrZYvUN4GgNX3oGR4n6ieD9oeNkAds",
     "user": ["Jerem1802"],
     "name": "french-connection - 🇫🇷Lyon"
-  },
+  }
+  ],
   "gateways": [
     {
       "idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
