@@ -12,9 +12,13 @@
 
 Exemple d'entrée dans `nodes.json` (les mixnodes se trouvent au début):
 ```json
+
+{
+"mixnodes": [
 {
     "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
     "user": ["Oheka","cgi_bin"],
     "name": "nym.notrustverify.ch - 🇨🇭Zurich"
   },
+]
 ```
