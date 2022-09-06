@@ -3,7 +3,7 @@
 ## Ajouter un mixnode
 
 1. Fork du repo
-2. Modifier le fichier [nodes.json](data/nodes.json) et rajouter les informations sour `mixnodes:
+2. Modifier le fichier [nodes.json](data/nodes.json) et rajouter les informations sous `mixnodes` ou `gateways`:
 
   * `idkey`: identity key du mixnode
   * `user`: pseudo Telegram (sans le `@`) 
