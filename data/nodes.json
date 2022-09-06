@@ -8,17 +8,17 @@
 "mixnodes": [
   {
     "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
-    "user": ["Oheka","cgi_bin"],
+    "user": ["NoTrustVerify"],
     "name": "nym.notrustverify.ch - 🇨🇭Zurich"
   },
   {
     "idkey": "4yRfauFzZnejJhG2FACTVQ7UnYEcFUYw3HzXrmuwLMaR",
-    "user": ["Notrustverify"],
+    "user": ["NoTrustVerify"],
     "name": "nym.notrustverify.ch - 🇨🇭Genève"
   },
   {
     "idkey": "B63yxdf92RdjwEeUFouxU4x5gRpWXKorT51px8EbpQvJ",
-    "user": ["Oheka","cgi_bin"],
+    "user": ["NoTrustVerify"],
     "name": "nym.notrustverify.ch - 🇨🇭Genève"
   },
   {
@@ -69,26 +69,19 @@
   ],
   "gateways": [
     {
-      "idkey":
-      "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
-      "user": [
-        "Notrustverify"
-      ],
-      "name": "nym.notrustverify.ch - \uD83C\uDDE8\uD83C\uDDEDZürich"
+      "idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
+      "user": ["NoTrustVerify"],
+      "name": "nym.notrustverify.ch - 🇨🇭Zürich"
     },
     {
-      "idkey":
-      "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
+      "idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
       "user": ["RemiStrasser"],
-      "name": "\uD83C\uDDEC\uD83C\uDDE7Londres"
+      "name": "🇬🇧Londres"
     },
-     {
-      "idkey":
-      "ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
-      "user": [
-        "Notrustverify"
-      ],
-      "name": "nym.notrustverify.ch - \uD83C\uDDF8\uD83C\uDDECSingapore"
+    {
+      "idkey":"ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
+      "user": ["NoTrustVerify"],
+      "name": "nym.notrustverify.ch - 🇸🇬Singapore"
     }
   ]
 }
