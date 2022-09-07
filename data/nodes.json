@@ -3,22 +3,6 @@
 		"description": "Comment déléguer",
 		"link": "https://medium.com/notrustverify/vous-voulez-d%C3%A9l%C3%A9guer-sur-nym-voici-comment-choisir-un-mixnode-pour-d%C3%A9l%C3%A9guer-ses-nym-96c3b2b31de0"
 	}],
-	"gateways": [{
-			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
-			"user": ["NoTrustVerify"],
-			"name": "nym.notrustverify.ch - 🇨🇭Zürich"
-		},
-		{
-			"idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
-			"user": ["RemiStrasser"],
-			"name": "🇬🇧Londres"
-		},
-		{
-			"idkey": "ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
-			"user": ["NoTrustVerify"],
-			"name": "nym.notrustverify.ch - 🇸🇬Singapore"
-		}
-	],
 	"mixnodes": [{
 			"idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
 			"user": ["NoTrustVerify"],
@@ -80,9 +64,25 @@
 			"name": "🇫🇷 Lyon"
 		},
 		{
-			"idkey": "DcuQg5P4H4F9qHXrZYvUN4GgNX3oGR4n6ieD9oeNkAds",
+			"idkey": "9EPJVTs4yHZ4wnwFLAzuHq8VHZrAAQxjk9gJC4pfh3Ri",
 			"user": ["Jerem1802"],
 			"name": "french-connection - 🇫🇷Lyon"
+		}
+	],
+	"gateways": [{
+			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇨🇭Zürich"
+		},
+		{
+			"idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
+			"user": ["RemiStrasser"],
+			"name": "🇬🇧Londres"
+		},
+		{
+			"idkey": "ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
+			"user": ["NoTrustVerify"],
+			"name": "nym.notrustverify.ch - 🇸🇬Singapore"
 		}
 	]
 }
