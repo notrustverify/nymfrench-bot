@@ -4,6 +4,7 @@
   "properties": {
     "links": {
       "type": "array",
+      "maxItems": 100,
       "items": [
         {
           "type": "object",
@@ -24,6 +25,7 @@
     },
     "mixnodes": {
       "type": "array",
+      "maxItems": 100,
       "items": [
         {
           "type": "object",
@@ -48,12 +50,12 @@
             "user",
             "name"
           ]
-        }
        }
       ]
     },
     "gateways": {
       "type": "array",
+      "maxItems": 100,
       "items": [
         {
           "type": "object",
