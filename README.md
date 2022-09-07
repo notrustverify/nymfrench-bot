@@ -10,11 +10,13 @@
   * `name`: site Web (optionnel) - [Emoji du pays](https://emojipedia.org/flags/) région
 3. Créer un Pull requests
 
-Exemple d'entrée dans `nodes.json`:
+Exemple d'entrée dans `nodes.json` (les mixnodes se trouvent au début):
 ```json
+"mixnodes": [
 {
     "idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
     "user": ["Oheka","cgi_bin"],
     "name": "nym.notrustverify.ch - 🇨🇭Zurich"
   },
+]
 ```
