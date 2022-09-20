@@ -83,6 +83,11 @@
 			"idkey": "ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
 			"user": ["NoTrustVerify"],
 			"name": "nym.notrustverify.ch - 🇸🇬Singapore"
+		},
+		{
+			"idkey": "EmksoVk8Q7RZZH8atvZspDShD7Ekq6vDPnjK4LCQ7DUv",
+			"user": ["zBlaxx"],
+			"name": "gateway4u - 🇫🇷 Lyon"
 		}
 	]
 }
