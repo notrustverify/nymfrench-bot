@@ -1,86 +1,77 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "links": {
-      "type": "array",
-      "maxItems": 100,
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "description": {
-              "type": "string"
-            },
-            "link": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "description",
-            "link"
-          ]
-        }
-      ]
-    },
-    "mixnodes": {
-      "type": "array",
-      "maxItems": 100,
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "idkey": {
-              "type": "string"
-            },
-            "user": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            "name": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "idkey",
-            "user",
-            "name"
-          ]
-       }
-      ]
-    },
-    "gateways": {
-      "type": "array",
-      "maxItems": 100,
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "idkey": {
-              "type": "string"
-            },
-            "user": {
-              "type": "array",
-              "items": [
-                {
-                  "type": "string"
-                }
-              ]
-            },
-            "name": {
-              "type": "string"
-            }
-        }
-      ]
-    }
-  },
-  "required": [
-    "links",
-    "mixnodes",
-    "gateways"
-  ]
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"links": {
+			"type": "array",
+			"maxItems": 100,
+			"items": [{
+				"type": "object",
+				"properties": {
+					"description": {
+						"type": "string"
+					},
+					"link": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"description",
+					"link"
+				]
+			}]
+		},
+		"mixnodes": {
+			"type": "array",
+			"maxItems": 100,
+			"items": [{
+				"type": "object",
+				"properties": {
+					"idkey": {
+						"type": "string"
+					},
+					"user": {
+						"type": "array",
+						"items": [{
+							"type": "string"
+						}]
+					},
+					"name": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"idkey",
+					"user",
+					"name"
+				]
+			}]
+		},
+		"gateways": {
+			"type": "array",
+			"maxItems": 100,
+			"items": [{
+				"type": "object",
+				"properties": {
+					"idkey": {
+						"type": "string"
+					},
+					"user": {
+						"type": "array",
+						"items": [{
+							"type": "string"
+						}]
+					},
+					"name": {
+						"type": "string"
+					}
+				}
+			}]
+		}
+	},
+	"required": [
+		"links",
+		"mixnodes",
+		"gateways"
+	]
 }
