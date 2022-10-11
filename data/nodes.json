@@ -68,6 +68,11 @@
 			"user": ["Jerem1802"],
 			"name": "french-connection - 🇫🇷Lyon"
 		}
+		{
+			"idkey": "B5aoD9iXDpBnR1MbMGA6GkS6pMpJCEFqogsrhw4mH5gW",
+			"user": ["regisgr"],
+			"name": "Gtech-Fr - 🇫🇷 Aix-en-Pce"
+		}
 	],
 	"gateways": [{
 			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
@@ -94,10 +99,5 @@
 			"user": ["lebeckk"],
 			"name": "mynixnode.com - 🇨🇭Zurich "
 		},
-		{
-			"idkey": "B5aoD9iXDpBnR1MbMGA6GkS6pMpJCEFqogsrhw4mH5gW",
-			"user": ["regisgr"],
-			"name": "Gtech-Fr - 🇫🇷 Aix-en-Pce"
-		}
 	]
 }
