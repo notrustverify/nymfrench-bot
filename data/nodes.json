@@ -44,11 +44,6 @@
 			"name": "mynixnode.com - 🇨🇭Zurich "
 		},
 		{
-			"idkey": "4nb36LzsEhxeZp4TCV3VDzxVwqL1JQNpKixqVELtqZ8e",
-			"user": ["tholgd"],
-			"name": "🇫🇷 Paris"
-		},
-		{
 			"idkey": "D5jBtaNaZx2jn7111tBSA362KzvBHU9jXKMYYngHmEVb",
 			"user": ["ketominer"],
 			"name": "🇫🇷 Paris"
@@ -68,11 +63,6 @@
 			"user": ["Jerem1802"],
 			"name": "french-connection - 🇫🇷Lyon"
 		},
-		{
-			"idkey": "B5aoD9iXDpBnR1MbMGA6GkS6pMpJCEFqogsrhw4mH5gW",
-			"user": ["regisgr"],
-			"name": "Gtech-Fr - 🇫🇷 Aix-en-Pce"
-		}
 	],
 	"gateways": [{
 			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
@@ -83,11 +73,6 @@
 			"idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
 			"user": ["RemiStrasser"],
 			"name": "🇬🇧Londres"
-		},
-		{
-			"idkey": "ERFGo6CbzLe51EZUgGJoYg2zsYnVXVVfLyB5CZ8P9vsU",
-			"user": ["NoTrustVerify"],
-			"name": "nym.notrustverify.ch - 🇸🇬Singapore"
 		},
 		{
 			"idkey": "EmksoVk8Q7RZZH8atvZspDShD7Ekq6vDPnjK4LCQ7DUv",
