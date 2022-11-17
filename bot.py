@@ -14,7 +14,8 @@ from telegram.update import Update
 from utils import Utils
 
 BASE_URL_MIXNODE = "https://validator.nymtech.net/api/v1/status/mixnode/"
-BASE_URL_EXPLORER = "https://explorer.nymtech.net/api/v1/mix-node/"
+#BASE_URL_EXPLORER = "https://explorer.nymtech.net/api/v1/mix-node/"
+BASE_URL_EXPLORER = "https://mixnet.explorers.guru/mixnode/"
 BASE_URL_STAKE = "/stake-saturation"
 NG_APY = "https://mixnet.api.explorers.guru/api/mixnodes"
 
