@@ -25,11 +25,6 @@
 			"name": "🇺🇸 New-York"
 		},
 		{
-			"idkey": "D58EM1Sb69tDpJBtUB4LevwyN28AMTFaqjsM8p8NhNpE",
-			"user": ["n0bra1in"],
-			"name": "🇫🇷 Paris"
-		},
-		{
 			"idkey": "29Q3jp7DN1ER82DcBFXo6v6hvWpKtvnP7SEmcmPJ8E9E",
 			"user": ["RemiStrasser"],
 			"name": "🇬🇧 Londres"
@@ -68,13 +63,7 @@
     			"idkey": "4p3oUer1qWva9aKDkz9U9eSq4Lxg6EC2cS7AHtyeQydC",
     			"user": ["fegas"],
     			"name": "🇩🇪 Düsseldorf"
-		},
-		{
-    			"idkey": "3NxfHLnv3ZULDL56Q6izi5u8XjEsVQq4NBN7zPYVxjWD",
-    			"user": ["JEROMEHTO"],
-    			"name": "🇵🇱 Varsovie"
-		}
-  		
+		},	
 	],
 	"gateways": [
 		{
