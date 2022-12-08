@@ -3,8 +3,7 @@
 		"description": "Comment déléguer",
 		"link": "https://medium.com/notrustverify/vous-voulez-d%C3%A9l%C3%A9guer-sur-nym-voici-comment-choisir-un-mixnode-pour-d%C3%A9l%C3%A9guer-ses-nym-96c3b2b31de0"
 	}],
-	"mixnodes": [
-		{
+	"mixnodes": [{
 			"idkey": "APxUbCmGp4K9qDzvwVADJFNu8S3JV1AJBw7q6bS5KN9E",
 			"user": ["NoTrustVerify"],
 			"name": "nym.notrustverify.ch - 🇨🇭Zurich"
@@ -55,13 +54,12 @@
 			"name": "french-connection - 🇫🇷Lyon"
 		},
 		{
-    			"idkey": "4p3oUer1qWva9aKDkz9U9eSq4Lxg6EC2cS7AHtyeQydC",
-    			"user": ["fegas"],
-    			"name": "🇩🇪 Düsseldorf"
-		},	
+			"idkey": "4p3oUer1qWva9aKDkz9U9eSq4Lxg6EC2cS7AHtyeQydC",
+			"user": ["fegas"],
+			"name": "🇩🇪 Düsseldorf"
+		}
 	],
-	"gateways": [
-		{
+	"gateways": [{
 			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
 			"user": ["NoTrustVerify"],
 			"name": "nym.notrustverify.ch - 🇨🇭Zürich"
