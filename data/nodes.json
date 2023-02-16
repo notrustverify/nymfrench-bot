@@ -58,10 +58,16 @@
 			"user": ["Jerem1802"],
 			"name": "french-connection - 🇫🇷Lyon"
 		},
+		
 		{
-			"idkey": "4p3oUer1qWva9aKDkz9U9eSq4Lxg6EC2cS7AHtyeQydC",
+			"idkey": "6rC5rmY3bUi5djsuK9LEDTgYZKmxVZ2vkvGox2H77pq2",
 			"user": ["fegas"],
 			"name": "🇩🇪 Düsseldorf"
+		},
+		{
+			"idkey": "4p3oUer1qWva9aKDkz9U9eSq4Lxg6EC2cS7AHtyeQydC",
+			"user": ["zBlaxx"],
+			"name": "n0de4u - 🇨🇦 Montréal"
 		}
 	],
 	"gateways": [{
@@ -87,7 +93,12 @@
 		{
 			"idkey": "2jgMsxPBwraXpVQJL2rnEC7zXiefBD4tEUjU6UTLsTLV",
 			"user": ["zBlaxx"],
-			"name": "gateway4u - 🇺🇸 Philadelphia"			
+			"name": "gateway4u - 🇺🇸 Kansas city"			
+		},
+		{
+			"idkey": "Ck8zpXTSXMtS9YZ7k7a5BiaoLZfffWuqGWLndujh4Lw4",
+			"user": ["zBlaxx"],
+			"name": "gateway4u - 🇨🇦 Montréal"			
 		}
 	]
 }
