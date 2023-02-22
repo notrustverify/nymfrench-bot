@@ -68,6 +68,11 @@
 			"idkey": "6rC5rmY3bUi5djsuK9LEDTgYZKmxVZ2vkvGox2H77pq2",
 			"user": ["zBlaxx"],
 			"name": "n0de4u - 🇨🇦 Montréal"
+		},
+		{
+			"idkey": "8AMgKyRkxYJW2YffJJLzznEBqbpW9gurHCSNpkhauEfp",
+			"user": ["spaps74"],
+			"name": "spaps - CH Geneve"			
 		}
 	],
 	"gateways": [{
@@ -100,5 +105,6 @@
 			"user": ["zBlaxx"],
 			"name": "gateway4u - 🇨🇦 Montréal"			
 		}
+
 	]
 }
