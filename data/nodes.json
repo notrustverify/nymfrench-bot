@@ -73,7 +73,12 @@
 			"idkey": "8AMgKyRkxYJW2YffJJLzznEBqbpW9gurHCSNpkhauEfp",
 			"user": ["spaps74"],
 			"name": "spaps - CH Geneve"			
-		}
+		},
+		{
+			"idkey": "BHfF347rvGQ7eFfrYd9aVgiEgdaLKtKrCkmugLD2P78x",
+			"user": ["spaps74_Vol2"],
+			"name": "spaps - CH Geneve"			
+		}    
 	],
 	"gateways": [{
 			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
