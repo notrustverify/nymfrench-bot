@@ -94,6 +94,13 @@
 			"user": ["zBlaxx"],
 			"name": "gateway4u - 🇨🇦 Montréal"			
 		}
+		"mixnodes": [
+         	{
+    			"idkey": "HRBtAUqBm8GdTgPRKjfehwWB3JCidCqpZFjZQYFrXWA2",
+    			"user": ["adrojis"],
+    			"name": "adrojis-node"
+  		},
+]
 
 	]
 }
