@@ -67,7 +67,12 @@
     			"idkey": "3NxfHLnv3ZULDL56Q6izi5u8XjEsVQq4NBN7zPYVxjWD",
     			"user": ["JEROMEHTO"],
     			"name": "🇵🇱 Varsovie"
-		}
+		},
+		{ 
+			"idkey": "5tbYgJcM8N7XzcbSzAv6sFFTo4EMWmiCUs49hAt98GSd",
+            		"user": ["Hiroshimat"],
+            		"name": "Yuzu - 🇵🇱 Varsovie"	
+        }
 	],
 	"gateways": [{
 			"idkey": "EBT8jTD8o4tKng2NXrrcrzVhJiBnKpT1bJy5CMeArt2w",
