@@ -77,16 +77,6 @@
     			"idkey": "3NxfHLnv3ZULDL56Q6izi5u8XjEsVQq4NBN7zPYVxjWD",
     			"user": ["JEROMEHTO"],
     			"name": "🇵🇱 Varsovie"
-		},
-		{ 
-			"idkey": "5tbYgJcM8N7XzcbSzAv6sFFTo4EMWmiCUs49hAt98GSd",
-            		"user": ["Hiroshimat"],
-            		"name": "Yuzu - 🇵🇱 Varsovie"	
-    },
-		{
-    			"idkey": "DGrajhR83UiWAPjkxGCZMAvWmWBqWEui4v57e5JgqCLT",
-    			"user": ["JEROMEHTO"],
-    			"name": "🏴󠁮󠁬󠁺󠁨󠁿 Amsterdam"
 		}
 	],
 	"gateways": [{
@@ -98,22 +88,6 @@
 			"idkey": "EEyq16v63aotPBCepxUpCgAojrNasZ6Hk1PjpRyBAdEp",
 			"user": ["RemiStrasser"],
 			"name": "🇬🇧Londres"
-		},
-		{
-			"idkey": "EmksoVk8Q7RZZH8atvZspDShD7Ekq6vDPnjK4LCQ7DUv",
-			"user": ["zBlaxx"],
-			"name": "nym.node4u.net - 🇫🇷 Lyon"
-		},
-		{
-			"idkey": "GsGEZiDBz8SWfHGaK5SDmhfbTEM55v37WCYYcT9wTSxN",
-			"user": ["lebeckk"],
-			"name": "mynixnode.com - 🇨🇭Zurich "
-		},
-		{
-			"idkey": "Ck8zpXTSXMtS9YZ7k7a5BiaoLZfffWuqGWLndujh4Lw4",
-			"user": ["zBlaxx"],
-			"name": "nym.node4u.net - 🇨🇦 Montréal"			
 		}
-
 	]
 }
