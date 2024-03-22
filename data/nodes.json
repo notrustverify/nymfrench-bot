@@ -71,7 +71,7 @@
 		{
 			"idkey": "6rC5rmY3bUi5djsuK9LEDTgYZKmxVZ2vkvGox2H77pq2",
 			"user": ["zBlaxx"],
-			"name": "nym.node4u.net - 🇨🇦 Montréal"
+			"name": "nym.node4u.net - 🇨🇦 Beauharnois"
 		},
 		{
     			"idkey": "3NxfHLnv3ZULDL56Q6izi5u8XjEsVQq4NBN7zPYVxjWD",
@@ -87,6 +87,11 @@
     			"idkey": "DGrajhR83UiWAPjkxGCZMAvWmWBqWEui4v57e5JgqCLT",
     			"user": ["JEROMEHTO"],
     			"name": "🏴󠁮󠁬󠁺󠁨󠁿 Amsterdam"
+		},
+		{
+    			"idkey": "81oyG2qvEN3H2qRVHfZ4v3eoBR2kAFsW5x9AJTiR56hC",
+    			"user": ["zBlaxx"],
+    			"name": "nym.node4u.net - 🇹🇼 TAIWAN"
 		}
 	],
 	"gateways": [{
