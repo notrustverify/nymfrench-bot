@@ -92,6 +92,11 @@
     			"idkey": "81oyG2qvEN3H2qRVHfZ4v3eoBR2kAFsW5x9AJTiR56hC",
     			"user": ["zBlaxx"],
     			"name": "nym.node4u.net - 🇹🇼 TAIWAN"
+		},
+		{
+			"idkey": "8YN1Sr3juYu5AFyHXf3rpmwsvN9mvEThELisSMjsnYrv",
+			"user": ["JEROMEHTO"],
+			"name": "🇩🇪 Berlin"
 		}
 	],
 	"gateways": [{
